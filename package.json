@@ -1,0 +1,58 @@
+{
+  "name": "arduino-esp32-s3",
+  "version": "1.0.0",
+  "author": "ArthurZheng",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/openblock-plugin/arduinoEsp32S3.git"
+  },
+  "type": "module",
+  "scripts": {
+    "prepare": "husky",
+    "dev": "npx openblock-registry-cli dev",
+    "build": "npx openblock-registry-cli build",
+    "build:obfuscate": "npx openblock-registry-cli build --obfuscate",
+    "publish": "npx openblock-registry-cli publish",
+    "publish:dry": "npx openblock-registry-cli publish --dry-run",
+    "validate": "npx openblock-registry-cli validate",
+    "i18n:update": "npx openblock-registry-cli i18n update",
+    "lint": "eslint . --ext .js --fix"
+  },
+  "openblock": {
+    "name": "Esp32-S3",
+    "deviceId": "arduinoEsp32S3",
+    "manufactor": "espressif",
+    "learnMore": "https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32s3/index.html",
+    "type": "arduino",
+    "iconURL": "./assets/arduinoEsp32S3.png",
+    "description": {
+      "formatMessage": {
+        "id": "arduinoEsp32S3.description",
+        "default": "Integrates a dedicated AI accelerator and rich peripheral set for efficient, low-power IoT edge and AI workloads."
+      }
+    },
+    "bluetoothRequired": false,
+    "serialportRequired": true,
+    "defaultBaudRate": "115200",
+    "internetConnectionRequired": false,
+    "launchPeripheralConnectionFlow": true,
+    "useAutoScan": false,
+    "connectionIconURL": "./assets/arduinoEsp32S3-illustration.svg",
+    "connectionSmallIconURL": "./assets/arduinoEsp32S3-small.svg",
+    "main": "./src/arduinoEsp32S3.js",
+    "generator": "./src/generator.js",
+    "translations": "./src/translations.js",
+    "toolchains": "arduino-esp32-esp32",
+    "programMode": ["upload"],
+    "tags": ["arduino"],
+    "helpLink": "https://wiki.openblock.cc/general-hardware-guidelines/boards/esp32-s3",
+    "libraries": "./libraries"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.3.0",
+    "eslint-config-scratch": "^5.0.0",
+    "husky": "^9.0.0"
+  }
+}
