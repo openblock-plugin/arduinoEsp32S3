@@ -169,7 +169,7 @@ export default Blockly => {
 
         Blockly.Arduino.includes_.setServoOutput = '#include <ESP32Servo.h>';
         Blockly.Arduino.definitions_[`setServoOutput${arg0}`] = `Servo servo_${arg0};`;
-        Blockly.Arduino.setups_[`setServoOutput${arg0}`] = `servo_${arg0}.attach` + `(${arg0});`;
+        Blockly.Arduino.setups_[`setServoOutput${arg0}`] = `servo_${arg0}.attach(${arg0});`;
 
         delete Blockly.Arduino.setups_.esp32LedcFix;
         Blockly.Arduino.setups_.esp32LedcFix = 'delay(40);';
