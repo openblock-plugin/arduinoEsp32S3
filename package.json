@@ -1,6 +1,6 @@
 {
   "name": "arduino-esp32-s3",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "ArthurZheng",
   "license": "MIT",
   "repository": {
@@ -48,7 +48,6 @@
     "translations": "./src/translations.js",
     "toolchains": "arduino-esp32-esp32",
     "programMode": [
-      "realtime",
       "upload"
     ],
     "tags": [
@@ -56,13 +55,6 @@
     ],
     "helpLink": "https://wiki.openblock.cc/general-hardware-guidelines/boards/esp32-s3",
     "libraries": "./libraries",
-    "firmwares": [
-      {
-        "id": "standard",
-        "name": "Firmata Standard",
-        "file": "./firmwares/ConfigurableFirmata.ino.merged.bin"
-      }
-    ],
     "examples": [
       {
         "id": "blink",

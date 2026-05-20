@@ -1,4 +1,4 @@
-const {formatMessage, ArgumentType, BlockType, ProgramModeType, ArduinoPeripheral} = window.Scratch;
+const {formatMessage, ArgumentType, BlockType, ProgramModeType, CommonPeripheral} = window.Scratch;
 
 /**
  * The list of USB device filters.
@@ -144,7 +144,7 @@ const DataType = {
 /**
  * Manage communication with a Arduino esp32s3 peripheral over a OpenBlock Link client socket.
  */
-class ArduinoEsp32S3 extends ArduinoPeripheral {
+class ArduinoEsp32S3 extends CommonPeripheral {
     /**
      * Construct a Arduino communication object.
      * @param {Runtime} runtime - the OpenBlock runtime
